@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Test</title>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+	<div id="embedded-video"></div>
+
+	<script>
+		
+		$(document).ready(function() {
+
+		var displayRandomWebcam = " ";
+
+		for (var i = 0; i < displayRandomWebcam.length; i++) {
+			
+
+		}
+
+		var key = "JPZH8HA6lBmshdutMhV7vXqrSTydp1Ov8CljsnUVWnKklt18RP";
+       
+       	$.ajax({
+           url: "https://webcamstravel.p.mashape.com/webcams/list/orderby=random&limit=1",
+           headers: {
+               "X-Mashape-Key": key
+           },
+           type: "GET",
+           success: function (response) {
+           }
+       	});
+
+       $("#embedded-video").appendTo(displayRandomWebcam);
+   	
+   		});
+
+		
+
+	</script>
+
+</body>
+</html>
